@@ -1,19 +1,28 @@
 public class Bicycle
 {
     int speed = 0;
-    int gear = 0;
-    int wheels = 1;
+    int gear = 1;
+    int cadence = 0;
 
-    void changeSpeed(int value)
-    {
-        speed = value;
+    void changeCadence(int newValue) {
+        cadence = newValue;
     }
-    void changeWheelsAmount(int value)
-    {
-        wheels = value;
+
+    void changeGear(int newValue){
+        gear = newValue;
     }
-    void changeGear(int value)
-    {
-        gear = value;
+
+    void speedUp(int increment){
+        speed = speed + increment;
+    }
+
+    void applyBrakes(int decrement){
+        speed = speed - decrement;
+    }
+
+    void printStates(){
+        System.out.println("cadence:" +
+                cadence + " speed: "+
+                speed + " gear: " + gear);
     }
 }
