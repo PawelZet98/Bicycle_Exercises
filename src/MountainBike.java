@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class MountainBike {
+public class MountainBike  extends Bicycle{
+
+    int num_of_dampers = 1;
 }
